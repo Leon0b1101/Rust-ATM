@@ -22,7 +22,7 @@ impl ATM {
         };
         let newBalance = user.getBalance() + input;
         &user.setBalance(newBalance);
-        println!("Balance: {}", &user.getBalance());
+        println!("Balance: {}$", &user.getBalance());
     }
     pub fn withdraw(user: &mut User) {
         let mut amount = String::new();
@@ -38,15 +38,15 @@ impl ATM {
         }
         let newBalance = user.getBalance() - amount;
         &user.setBalance(newBalance); 
-        println!("Balance: {}", &user.getBalance());
+        println!("Balance: {}$", &user.getBalance());
     }
     pub fn showBalance(user: &User) {
-        println!("Your balance is {}", user.getBalance());
+        println!("Your balance is {}$", user.getBalance());
     }
 }
 
 fn main() {
-    let mut admin = User::new("1234512345", "Leon", 12345, 123);
+    let mut admin = User::new("1234512345", "Leon", 12345, 0);
     loop {
         ATM::printOptions();
         let mut choice = String::new();
