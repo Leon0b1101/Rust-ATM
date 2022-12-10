@@ -46,7 +46,7 @@ impl ATM {
 }
 
 fn main() {
-    let mut admin = User::new("1234512345", "Leon", 12345, 123);
+    let mut admin = User::new("1234512345", "Leon", 12345, 0);
     loop {
         ATM::printOptions();
         let mut choice = String::new();
